@@ -1,0 +1,18 @@
+services:
+  server:
+    build: .
+    restart: always
+    ports:
+      - 8090:8090
+    depends_on:
+      - mysqldb
+  mysqldb:
+    image: mysql:latest
+    restart: always
+    ports:
+      - 3333:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shopdb
+      MYSQL_PASSWORD: root
+
