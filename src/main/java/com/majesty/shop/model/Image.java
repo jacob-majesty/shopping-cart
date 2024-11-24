@@ -8,6 +8,7 @@ import lombok.Setter;
 import java.sql.Blob;
 
 @Entity
+@Table(name = "images")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
